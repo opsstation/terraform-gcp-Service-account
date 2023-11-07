@@ -4,14 +4,15 @@ module "labels" {
   environment = var.environment
   label_order = var.label_order
 }
-
+data "google_client_config" "current" {
+}
 ########################################(service_account)###############################################
 resource "google_service_account" "service_account" {
   count = var.google_service_account_enabled && var.enabled ? 1 : 0
   account_id   = var.account_id
   display_name = var.display_name
   disabled = var.disabled
-  project = var.project
+  project = data.google_client_config.current.project
 }
 
 ########################################(key)###########################################################

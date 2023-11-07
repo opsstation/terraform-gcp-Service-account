@@ -31,8 +31,8 @@ output "public_key" {
 }
 
 output "private_key" {
-  value   = module.service-account.private_key
-  sensitive   = true
+  value     = module.service-account.private_key
+  sensitive = true
 }
 
 output "valid_after" {

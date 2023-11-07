@@ -38,11 +38,6 @@ variable "disabled" {
   default = false
 }
 
-variable "project" {
-  type = string
-  default = ""
-}
-
 variable "google_service_account_key_enabled" {
   type = bool
   default = true
@@ -83,10 +78,7 @@ variable "members" {
   default = []
 }
 
-variable "project_id" {
-  type = string
-  default = ""
-}
+
 
 
 
