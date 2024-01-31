@@ -8,7 +8,7 @@ provider "google" {
 ############################
 module "service-account" {
   source                             = "./.."
-  name                               = "app"
+  name                               = "dev"
   environment                        = "test"
   google_service_account_key_enabled = true
   key_algorithm                      = "KEY_ALG_RSA_2048"
